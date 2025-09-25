@@ -1,0 +1,41 @@
+<div class="detail-container">
+  <div class="detail-header">
+    <h2>Issue Details</h2>
+    <button (click)="close()" class="close-btn">×</button>
+  </div>
+  
+  <div class="detail-content" *ngIf="issue">
+    <div class="detail-field">
+      <label>ID:</label>
+      <span>{{ issue.id }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Title:</label>
+      <span>{{ issue.title }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Description:</label>
+      <span>{{ issue.description || 'No description' }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Status:</label>
+      <span [class]="'status-badge ' + issue.status">{{ issue.status }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Priority:</label>
+      <span [class]="'priority-badge ' + issue.priority">{{ issue.priority }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Assignee:</label>
+      <span>{{ issue.assignee || 'Unassigned' }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Created:</label>
+      <span>{{ issue.created_at | date:'medium' }}</span>
+    </div>
+    <div class="detail-field">
+      <label>Last Updated:</label>
+      <span>{{ issue.updated_at | date:'medium' }}</span>
+    </div>
+  </div>
+</div>
