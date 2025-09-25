@@ -5,32 +5,26 @@ A full-stack issue tracking application with a Python FastAPI backend and an Ang
 
 ---
 
-## Assignment Requirements
 
-**Assignment: Build a Small Issue Tracker**
+## Project Goals
 
-Develop a simple Issue Tracker with a Python backend serving REST APIs and an Angular frontend with a functional UI. The system should allow users to view, search, filter, sort, create, and update issues.
+This project is a simple Issue Tracker built with a Python FastAPI backend and an Angular frontend. The main goals are:
 
-### Part 1: Backend (Python)
-#### Endpoints
-- `GET /health` → `{ "status": "ok" }`
-- `GET /issues` → Supports search by title, filters, sorting, and pagination (`page`, `pageSize`).
-- `GET /issues/:id` → Return single issue.
-- `POST /issues` → Create new issue. The backend should auto-generate `id`, add `createdAt` and `updatedAt`.
-- `PUT /issues/:id` → Update issue. The `updatedAt` field should be refreshed.
+- Provide a REST API for managing issues, including viewing, searching, filtering, sorting, creating, and updating issues.
+- Deliver a modern Angular UI for interacting with the issue tracker, supporting all core features.
 
-### Part 2: Frontend (Angular)
-#### Requirements
-- **Issues List Page**
-   - Display a table with columns: `id`, `title`, `status`, `priority`, `assignee`, and `updatedAt`.
-   - Provide filters for status, priority, and assignee.
-   - Implement a search box.
-   - Enable sorting.
-   - Support pagination with `page` and `pageSize`.
-   - Include action buttons: Create Issue (opens a form to add a new issue), and Edit Issue (update issue details).
-   - Clicking a row (except Edit) opens the Issue Detail view.
-- **Issue Detail Page**
-   - Show the full issue JSON in a drawer or a separate route.
+### Backend (Python/FastAPI)
+Implements endpoints:
+- `GET /health` — Health check
+- `GET /issues` — List issues, with search (by title), filters, sorting, and pagination (`page`, `pageSize`)
+- `GET /issues/:id` — Get a single issue
+- `POST /issues` — Create a new issue (auto-generates `id`, adds `createdAt` and `updatedAt`)
+- `PUT /issues/:id` — Update an issue (refreshes `updatedAt`)
+
+### Frontend (Angular)
+Features:
+- Issues List Page: Table view with columns (`id`, `title`, `status`, `priority`, `assignee`, `updatedAt`), filters, search, sorting, pagination, create/edit actions, and row click for detail view
+- Issue Detail Page: Shows full issue JSON in a drawer or separate route
 
 ---
 
