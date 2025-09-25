@@ -1,0 +1,31 @@
+# Global ignores for all rubbish files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.bak
+*.swp
+.idea/
+.vscode/
+.env
+.env.*
+# Ignore node_modules and dist in frontend
+issue-tracker-frontend/node_modules/
+issue-tracker-frontend/dist/
+issue-tracker-frontend/.angular/cache/
+# Ignore Python cache and venv in backend
+issue-tracker-backend/__pycache__/
+issue-tracker-backend/app/__pycache__/
+issue-tracker-backend/app/routers/__pycache__/
+issue-tracker-backend/venv/
+issue-tracker-backend/.env
+issue-tracker-backend/.env.*
+issue-tracker-backend/.pytest_cache/
+issue-tracker-backend/.coverage
+issue-tracker-backend/htmlcov/
+issue-tracker-backend/.tox/
+issue-tracker-backend/.cache/
+issue-tracker-backend/*.sqlite3
+issue-tracker-backend/*.db
+issue-tracker-backend/*.egg-info/
